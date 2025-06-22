@@ -18,19 +18,12 @@ type Degree = {
         <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6">Education</h2>
         <div className="bg-slate-800/50 rounded-md p-6">
           {degrees.map((degree, index) => (
-            // Use a class to add space between entries if there are multiple degrees
             <div key={index} className="[&:not(:last-child)]:mb-6">
-              
-              {/* 1. The Degree is now the main heading */}
               <h3 className="text-lg font-medium text-slate-200">{degree.degree}</h3>
-              
-              {/* 2. The Institution is now below it */}
               <div className="flex items-center gap-2 mt-1">
                 <IconSchool size={16} className="text-slate-500" />
                 <p className="text-md text-slate-400">{degree.institution}</p>
               </div>
-              
-              {/* 3. Location and Period are combined on the last line */}
               <p className="text-sm text-slate-500 mt-1">
                 {degree.location} | {degree.period}
               </p>

@@ -1,7 +1,6 @@
 // src/components/icons/IconGithub.tsx
 import React from 'react';
 
-// This component accepts standard props like `className` and `size`
 type IconProps = {
   size?: number;
   className?: string;

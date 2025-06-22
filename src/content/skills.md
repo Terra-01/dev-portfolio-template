@@ -22,4 +22,8 @@ skillCategories:
       - 'Formspree'
       - 'Figma'
       - 'Postman'
+  # You can add more skill categories by copying the structure above
+  # Each category should have: name and skills fields
+  # The skills field should be a list of your actual skills in that category
+  # Feel free to reorganize categories based on your preferences
 ---

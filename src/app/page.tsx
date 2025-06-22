@@ -2,7 +2,6 @@
 import Image from 'next/image';
 import { getSectionData } from '@/lib/markdown';
 
-// Import all our components
 import About from '@/components/About';
 import Experience from '@/components/Experience';
 import Projects from '@/components/Projects';
@@ -11,16 +10,13 @@ import Skills from '@/components/Skills';
 import DownloadCV from '@/components/DownloadCV';
 import Socials from '@/components/Socials';
 import Contact from '@/components/Contact';
-// Import a 'Projects' component if you have one
 
 export default async function Home() {
-  // Fetch data for ALL sections at once
   const aboutData = await getSectionData('about');
   const experienceData = await getSectionData('experience');
   const projectsData = await getSectionData('projects');
   const educationData = await getSectionData('education');
   const skillsData = await getSectionData('skills');
-  // const projectsData = await getSectionData('projects');
 
   return (
     // Main container with overall padding

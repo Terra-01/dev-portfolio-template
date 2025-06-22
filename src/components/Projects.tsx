@@ -2,8 +2,6 @@
 import IconGithub from './icons/IconGithub';
 import IconExternalLink from './icons/IconExternalLink';
 
-// Define the shape of a single Project object.
-// `link` and `github` are optional (string | undefined).
 type Project = {
   name: string;
   link?: string;

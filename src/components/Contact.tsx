@@ -9,7 +9,6 @@ export default function Contact() {
   const [state, handleSubmit] = useForm("YOUR_UNIQUE_ID"); // <-- PASTE YOUR FORMSPREE ID HERE
   const [isOpen, setIsOpen] = useState(false);
 
-  // If the form was submitted successfully, render a thank you message inside the box.
   if (state.succeeded) {
     return (
       <section id="contact">
@@ -25,7 +24,6 @@ export default function Contact() {
     <section id="contact">
       <div className="bg-slate-800/50 rounded-md">
 
-        {/* This is the clickable header area with consistent padding */}
         <div
           className="flex justify-between items-center p-6 cursor-pointer"
           onClick={() => setIsOpen(!isOpen)}
@@ -45,7 +43,6 @@ export default function Contact() {
         <div 
           className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[500px]' : 'max-h-0'}`}
         >
-          {/* We add padding to the form container itself, but remove top padding */}
           <div className="px-6 pb-6">
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
