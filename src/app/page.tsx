@@ -34,7 +34,7 @@ export default async function Home() {
         {/* Left side: Identity (Pfp, Name, Title, etc.) */}
         <div className="flex items-center gap-4">
           <Image
-            src="/profile.png"
+            src="/profile.jpg"
             alt="Profile Picture"
             width={80}
             height={80}

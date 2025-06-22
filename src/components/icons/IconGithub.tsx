@@ -2,7 +2,6 @@
 import React from 'react';
 
 // This component accepts standard props like `className` and `size`
-// to behave just like a lucide-react icon.
 type IconProps = {
   size?: number;
   className?: string;

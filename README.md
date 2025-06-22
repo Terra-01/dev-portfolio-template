@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dev Portfolio Template
+
+A clean, modern, and easily customizable developer portfolio built with Next.js and Tailwind CSS. This template is designed to be a "digital garden" where you can showcase your work, skills, and experience in a beautifully organized, single-page layout. The content is managed through simple markdown files, making updates and version control a breeze.
+
+ <!-- A screenshot of finished portfolio -->
+
+## Features
+
+- **Component-Based Architecture:** Built with React and Next.js for a fast, modern web experience.
+- **Styled with Tailwind CSS:** A utility-first CSS framework for rapid UI development and customization.
+- **Markdown-Driven Content:** Easily edit your "About," "Experience," "Projects," and other sections in simple `.md` files.
+- **Responsive Design:** Looks great on all devices, from mobile phones to desktop screens.
+- **Self-Contained Icons:** All icons are included as local SVG components, so you have full control and no reliance on external libraries.
+- **Built-in Contact Form:** A collapsible contact form powered by Formspree.
+- **Ready for Analytics:** Easily integrates with Vercel Analytics for simple, privacy-friendly insights.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to get the template up and running on your local machine.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-Terra-01/dev-portfolio-template.git
+    cd dev-portfolio-template
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Customization Guide
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This template is designed for easy customization. Here is a complete guide to personalizing every part of the portfolio.
 
-## Learn More
+### 1. Primary Identity & Header
 
-To learn more about Next.js, take a look at the following resources:
+Your main personal information is located in the header.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+-   **Profile Picture:**
+    -   Place your profile picture in the `public/` folder.
+    -   Name the image `profile.jpg`.
+    -   For best results, use a square image.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+-   **Name, Title, and Tagline:**
+    -   Open `src/app/page.tsx`.
+    -   Find the `<header>` section and edit the text directly.
 
-## Deploy on Vercel
+-   **CV / Resume:**
+    -   Place your CV in PDF format inside the `public/` folder (e.g., `public/cv.pdf`).
+    -   Open `src/components/DownloadCV.tsx` and ensure the `href` attribute points to the correct filename. You can also change the downloaded filename in the `download` attribute.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 2. Social Links & Contact Form
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+-   **Social Media Links:**
+    -   Open `src/components/Socials.tsx`.
+    -   Replace the placeholder `href` values for GitHub, LinkedIn, X (Twitter), and Mail with your personal profile URLs.
+
+-   **Contact Form:**
+    1.  Go to [formspree.io](https://formspree.io) and create a new form.
+    2.  Copy your unique form ID.
+    3.  Open `src/components/Contact.tsx`.
+    4.  Paste your ID into the `useForm` hook: `useForm("YOUR_UNIQUE_ID")`.
+
+### 3. Main Content Sections (Markdown Files)
+
+All the main content for your portfolio lives in the `src/content/` directory. Edit these `.md` files to update the sections.
+
+-   #### **About Section (`src/content/about.md`)**
+    -   **Bio:** Edit the main paragraph text directly in the file.
+    -   **Highlighted Keywords:** The `highlightKeywords` list in the front matter will style matching words in your bio.
+    -   **Currently Learning:** Update the `currentlyLearning` list to show what skills you are currently focused on.
+
+-   #### **Experience Section (`src/content/experience.md`)**
+    -   Edit the list of `jobs`. Each job is an item in the list with `role`, `company`, `period`, and a `description`.
+    -   The `description` is a list of bullet points. Add or remove points using the `-` syntax.
+
+-   #### **Projects Section (`src/content/projects.md`)**
+    -   Edit the list of `projects`.
+    -   `link` (live site) and `github` are optional; if you remove a line, its icon will not appear.
+    -   `tech` is a list of technologies used. They will be displayed as tags.
+    -   `description` is a list of bullet points for the project's key features.
+
+-   #### **Education Section (`src/content/education.md`)**
+    -   Edit the list of `degrees`. Each entry has a `degree`, `institution`, `location`, and `period`.
+
+-   #### **Skills Section (`src/content/skills.md`)**
+    -   The skills are grouped into categories under `skillCategories`.
+    -   You can rename the categories (`Languages`, `Technologies`, etc.) or add new ones.
+    -   Update the `skills` list under each category with your personal skill set.
+
+## Deployment
+
+The easiest way to deploy your portfolio is with [Vercel](https://vercel.com/), the creators of Next.js.
+
+1.  Push your customized code to a GitHub repository.
+2.  Go to Vercel and import your project from GitHub.
+3.  Vercel will automatically detect the Next.js framework and configure the build settings.
+4.  Deploy!
+5.  **To enable analytics:** In your Vercel project dashboard, go to the "Analytics" tab and enable it.
+
+---
+
+That's it! By following this guide, you can transform this template into a personalized, professional portfolio that is ready to be shared with the world.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
