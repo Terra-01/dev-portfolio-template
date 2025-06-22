@@ -5,6 +5,7 @@ import { getSectionData } from '@/lib/markdown';
 // Import all our components
 import About from '@/components/About';
 import Experience from '@/components/Experience';
+import Projects from '@/components/Projects';
 import Education from '@/components/Education';
 import Skills from '@/components/Skills';
 import DownloadCV from '@/components/DownloadCV';
@@ -16,6 +17,7 @@ export default async function Home() {
   // Fetch data for ALL sections at once
   const aboutData = await getSectionData('about');
   const experienceData = await getSectionData('experience');
+  const projectsData = await getSectionData('projects');
   const educationData = await getSectionData('education');
   const skillsData = await getSectionData('skills');
   // const projectsData = await getSectionData('projects');
@@ -63,7 +65,11 @@ export default async function Home() {
         
         {/* LEFT COLUMN (Sticky Sidebar) */}
         <aside className="lg:w-1/3 lg:sticky lg:top-24 flex flex-col gap-12">
-            <About contentHtml={aboutData.contentHtml} />
+            <About 
+              contentHtml={aboutData.contentHtml} 
+              keywords={aboutData.highlightKeywords} 
+              learning={aboutData.currentlyLearning} 
+            />
             <Education degrees={educationData.degrees} />
             <Skills categories={skillsData.skillCategories} />
             <Contact />
@@ -73,8 +79,7 @@ export default async function Home() {
         {/* RIGHT COLUMN (Scrollable Main Content) */}
         <section className="lg:w-2/3 pt-12 lg:pt-0 flex flex-col gap-16">
           <Experience jobs={experienceData.jobs} />
-          {/* Add your Projects component here once it's ready */}
-          {/* <Projects projects={projectsData.projects} /> */}
+          <Projects projects={projectsData.projects} />
         </section>
 
       </div>

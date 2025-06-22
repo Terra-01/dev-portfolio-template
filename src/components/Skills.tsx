@@ -24,7 +24,7 @@ export default function Skills({ categories }: SkillsProps) {
             {/* Then, use an inner .map() to loop through the skills within that category */}
             <div className="flex flex-wrap gap-2">
               {category.skills.map((skill, skillIndex) => (
-                <div key={skillIndex} className="bg-slate-700 text-slate-200 font-medium py-1 px-3 rounded-full text-sm">
+                <div key={skillIndex} className="bg-slate-700 text-teal-300 font-medium py-1 px-3 rounded-full text-sm">
                   {skill}
                 </div>
               ))}
