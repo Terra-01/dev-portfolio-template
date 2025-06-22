@@ -8,6 +8,7 @@ import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import Skills from '@/components/Skills';
 import DownloadCV from '@/components/DownloadCV';
+import Contact from '@/components/Contact';
 // Import a 'Projects' component if you have one
 
 export default async function Home() {
@@ -66,7 +67,7 @@ export default async function Home() {
             <About contentHtml={aboutData.contentHtml} />
             <Skills skills={skillsData.skills} />
             <Education degrees={educationData.degrees} />
-            {/* Contact component will go here */}
+            <Contact />
           </div>
         </aside>
 

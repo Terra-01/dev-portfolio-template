@@ -1,6 +1,5 @@
 // src/components/Experience.tsx
 
-// First, define the 'shape' of a single job object with TypeScript
 type Job = {
     role: string;
     company: string;
@@ -20,7 +19,6 @@ type Job = {
           Experience
         </h2>
         <div>
-          {/* We use .map() to iterate over the jobs array and render each one */}
           {jobs.map((job, index) => (
             <div key={index} className="mb-8">
               <h3 className="text-lg font-medium text-slate-800">{job.role}</h3>

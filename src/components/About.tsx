@@ -9,7 +9,6 @@ type AboutProps = {
         <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6">
           About
         </h2>
-        {/* We use dangerouslySetInnerHTML because the HTML is generated from our trusted markdown file */}
         <div
           className="prose prose-slate max-w-none"
           dangerouslySetInnerHTML={{ __html: contentHtml }}
