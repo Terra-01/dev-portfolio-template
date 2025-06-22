@@ -29,8 +29,9 @@ export default async function Home() {
       {/* ================================================================= */}
       {/* HEADER (Full-width, at the top)                                 */}
       {/* ================================================================= */}
-      <header className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6 mb-16">
-        {/* Left side: Identity (Pic, Name, Title, Tagline) */}
+      <header className="flex justify-between items-start gap-6 mb-16">
+        
+        {/* Left side: Identity (Pfp, Name, Title, etc.) */}
         <div className="flex items-center gap-4">
           <Image
             src="/profile.png"
@@ -52,10 +53,14 @@ export default async function Home() {
           </div>
         </div>
         
-        {/* Right side: CV Button */}
-        <div className="shrink-0">
+        {/* 
+          Right side: ACTION BLOCK
+        */}
+        <div className="flex flex-col items-end gap-4">
+          <Socials />
           <DownloadCV />
         </div>
+
       </header>
 
       {/* ================================================================= */}
@@ -73,7 +78,6 @@ export default async function Home() {
             <Education degrees={educationData.degrees} />
             <Skills categories={skillsData.skillCategories} />
             <Contact />
-            <Socials />
         </aside>
 
         {/* RIGHT COLUMN (Scrollable Main Content) */}

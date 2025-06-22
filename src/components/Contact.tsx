@@ -3,7 +3,7 @@
 
 import { useState } from 'react';
 import { useForm, ValidationError } from '@formspree/react';
-import { ChevronDown } from 'lucide-react';
+import IconChevronDown from './icons/IconChevronDown';
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("YOUR_UNIQUE_ID"); // <-- PASTE YOUR FORMSPREE ID HERE
@@ -35,7 +35,7 @@ export default function Contact() {
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500">
             Contact
           </h2>
-          <ChevronDown 
+          <IconChevronDown 
             className={`text-slate-500 transition-transform duration-300 ${isOpen ? 'rotate-180' : ''}`}
             size={20}
           />

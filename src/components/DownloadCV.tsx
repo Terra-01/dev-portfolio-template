@@ -1,12 +1,16 @@
 // src/components/DownloadCV.tsx
+import IconDownload from './icons/IconDownload';
+
 export default function DownloadCV() {
-    return (
-      <a 
-        href="/cv.pdf" // Assuming your CV is named cv.pdf in the /public folder
-        download="Shivam_CV.pdf"
-        className="bg-slate-800 hover:bg-slate-700 text-white font-medium py-2 px-4 rounded-lg transition-colors duration-300"
-      >
-        Download CV
-      </a>
-    );
-  }
+  return (
+    <a 
+      href="/cv.pdf"
+      download="YourName_CV.pdf"
+      // The new classes for a "ghost button" style
+      className="group flex items-center gap-2 border border-slate-600 text-slate-300 py-2 px-4 rounded-lg transition-colors duration-300 hover:border-teal-400 hover:text-teal-400"
+    >
+      <IconDownload size={18} className="transition-transform group-hover:-translate-y-px" />
+      <span>Download CV</span>
+    </a>
+  );
+}

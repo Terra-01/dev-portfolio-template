@@ -1,4 +1,5 @@
 // src/components/Education.tsx
+import IconSchool from './icons/IconSchool';
 
 type Degree = {
     degree: string;
@@ -24,7 +25,10 @@ type Degree = {
               <h3 className="text-lg font-medium text-slate-200">{degree.degree}</h3>
               
               {/* 2. The Institution is now below it */}
-              <p className="text-md text-slate-400 mt-1">{degree.institution}</p>
+              <div className="flex items-center gap-2 mt-1">
+                <IconSchool size={16} className="text-slate-500" />
+                <p className="text-md text-slate-400">{degree.institution}</p>
+              </div>
               
               {/* 3. Location and Period are combined on the last line */}
               <p className="text-sm text-slate-500 mt-1">

@@ -1,5 +1,6 @@
 // src/components/Projects.tsx
-import { Github, ExternalLink } from 'lucide-react';
+import IconGithub from './icons/IconGithub';
+import IconExternalLink from './icons/IconExternalLink';
 
 // Define the shape of a single Project object.
 // `link` and `github` are optional (string | undefined).
@@ -29,13 +30,13 @@ export default function Projects({ projects }: ProjectsProps) {
                 {/* Conditionally render the link icon if project.link exists */}
                 {project.link && (
                   <a href={project.link} target="_blank" rel="noopener noreferrer" aria-label="External link">
-                    <ExternalLink className="text-slate-400 hover:text-teal-400" size={20} />
+                    <IconExternalLink className="text-slate-400 hover:text-teal-400" size={20} />
                   </a>
                 )}
                 {/* Conditionally render the GitHub icon if project.github exists */}
                 {project.github && (
                   <a href={project.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub repository">
-                    <Github className="text-slate-400 hover:text-teal-400" size={20} />
+                    <IconGithub className="text-slate-400 hover:text-teal-400" size={20} />
                   </a>
                 )}
               </div>

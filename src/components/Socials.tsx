@@ -1,11 +1,12 @@
 // src/components/Socials.tsx
-import { Github, Linkedin, Mail } from 'lucide-react';
+import IconGithub from './icons/IconGithub';
+import IconLinkedin from './icons/IconLinkedin';
+import IconX from './icons/IconX';
+import IconMail from './icons/IconMail';
 
 export default function Socials() {
   return (
-    // The main div now centers its content and has a little padding-top for spacing
-    <div className="flex items-center justify-center gap-6 pt-4">
-      {/* GitHub Link */}
+    <div className="flex items-center gap-5">
       <a
         href="https://github.com/yourusername" // <-- REPLACE THIS
         target="_blank"
@@ -13,10 +14,9 @@ export default function Socials() {
         aria-label="GitHub profile"
         className="text-slate-400 hover:text-teal-400 transition-colors"
       >
-        <Github size={24} />
+        <IconGithub size={22} />
       </a>
 
-      {/* LinkedIn Link */}
       <a
         href="https://linkedin.com/in/yourusername" // <-- REPLACE THIS
         target="_blank"
@@ -24,16 +24,25 @@ export default function Socials() {
         aria-label="LinkedIn profile"
         className="text-slate-400 hover:text-teal-400 transition-colors"
       >
-        <Linkedin size={24} />
+        <IconLinkedin size={22} />
       </a>
 
-      {/* Email Link */}
+      <a
+        href="https://x.com/yourusername" // <-- REPLACE THIS
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="X (formerly Twitter) profile"
+        className="text-slate-400 hover:text-teal-400 transition-colors"
+      >
+        <IconX size={18} />
+      </a>
+
       <a
         href="mailto:your.email@example.com" // <-- REPLACE THIS
         aria-label="Email address"
         className="text-slate-400 hover:text-teal-400 transition-colors"
       >
-        <Mail size={24} />
+        <IconMail size={24} />
       </a>
     </div>
   );
