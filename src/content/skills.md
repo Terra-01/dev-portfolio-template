@@ -1,12 +1,25 @@
 ---
 title: 'Skills'
-skills:
-  - name: 'JavaScript (ES6+)'
-  - name: 'TypeScript'
-  - name: 'React'
-  - name: 'Next.js'
-  - name: 'Node.js'
-  - name: 'Tailwind CSS'
-  - name: 'HTML & CSS'
-  - name: 'Git & GitHub'
+skillCategories:
+  - name: 'Languages'
+    skills:
+      - 'JavaScript (ES6+)'
+      - 'TypeScript'
+      - 'Python'
+      - 'HTML5'
+      - 'CSS3'
+  - name: 'Technologies'
+    skills:
+      - 'React'
+      - 'Next.js'
+      - 'Node.js'
+      - 'Tailwind CSS'
+      - 'PostgreSQL'
+  - name: 'Tools & Services'
+    skills:
+      - 'Git & GitHub'
+      - 'Vercel'
+      - 'Formspree'
+      - 'Figma'
+      - 'Postman'
 ---

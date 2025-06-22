@@ -8,6 +8,7 @@ import Experience from '@/components/Experience';
 import Education from '@/components/Education';
 import Skills from '@/components/Skills';
 import DownloadCV from '@/components/DownloadCV';
+import Socials from '@/components/Socials';
 import Contact from '@/components/Contact';
 // Import a 'Projects' component if you have one
 
@@ -62,17 +63,15 @@ export default async function Home() {
         
         {/* LEFT COLUMN (Sticky Sidebar) */}
         <aside className="lg:w-1/3 lg:sticky lg:top-24 flex flex-col gap-12">
-          {/* Add a wrapper div to contain all left-column components */}
-          <div>
             <About contentHtml={aboutData.contentHtml} />
-            <Skills skills={skillsData.skills} />
             <Education degrees={educationData.degrees} />
+            <Skills categories={skillsData.skillCategories} />
             <Contact />
-          </div>
+            <Socials />
         </aside>
 
         {/* RIGHT COLUMN (Scrollable Main Content) */}
-        <section className="lg:w-2/3 pt-12 lg:pt-0">
+        <section className="lg:w-2/3 pt-12 lg:pt-0 flex flex-col gap-16">
           <Experience jobs={experienceData.jobs} />
           {/* Add your Projects component here once it's ready */}
           {/* <Projects projects={projectsData.projects} /> */}
