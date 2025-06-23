@@ -19,7 +19,7 @@ type Degree = {
         <div className="bg-slate-800/50 rounded-md p-6">
           {degrees.map((degree, index) => (
             <div key={index} className="[&:not(:last-child)]:mb-6">
-              <h3 className="text-lg font-medium text-slate-200">{degree.degree}</h3>
+              <h3 className="text-lg font-semibold text-slate-100">{degree.degree}</h3>
               <div className="flex items-center gap-2 mt-1">
                 <IconSchool size={16} className="text-slate-500" />
                 <p className="text-md text-slate-400">{degree.institution}</p>

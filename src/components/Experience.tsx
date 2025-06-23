@@ -17,7 +17,7 @@ export default function Experience({ jobs }: ExperienceProps) {
       <div className="bg-slate-800/50 rounded-md p-6">
         {jobs.map((job, index) => (
           <div key={index} className="[&:not(:last-child)]:mb-8">
-            <h3 className="text-lg font-medium text-slate-200">{job.role}</h3>
+            <h3 className="text-lg font-semibold text-slate-100">{job.role}</h3>
             <p className="text-md text-slate-400 mt-1">
               {job.company} | {job.period}
             </p>

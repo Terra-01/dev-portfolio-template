@@ -23,7 +23,7 @@ export default function Projects({ projects }: ProjectsProps) {
           <div key={index} className="[&:not(:last-child)]:mb-10">
             {/* Project Header: Name and Links */}
             <div className="flex items-center justify-between mb-3">
-              <h3 className="text-lg font-medium text-slate-200">{project.name}</h3>
+              <h3 className="text-lg font-semibold text-slate-100">{project.name}</h3>
               <div className="flex items-center gap-4">
                 {/* Conditionally render the link icon if project.link exists */}
                 {project.link && (

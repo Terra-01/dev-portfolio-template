@@ -6,7 +6,7 @@ import IconMail from './icons/IconMail';
 
 export default function Socials() {
   return (
-    <div className="flex items-center gap-5">
+    <div className="flex w-full items-center justify-between">
       <a
         href="https://github.com/yourusername" // <-- REPLACE THIS
         target="_blank"
