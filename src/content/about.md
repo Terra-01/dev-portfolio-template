@@ -11,6 +11,7 @@ highlightKeywords:
 currentlyLearning:
   - 'WebSockets for Real-Time Apps'
   - 'CI/CD with GitHub Actions'
+  - 'Three.js'
 ---
 <!-- Your main about content goes here
 Write a brief introduction about yourself, your background, and what you do

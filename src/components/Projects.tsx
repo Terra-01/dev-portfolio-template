@@ -50,7 +50,7 @@ export default function Projects({ projects }: ProjectsProps) {
             </div>
 
             {/* Description Bullet Points */}
-            <ul className="list-disc pl-5 space-y-1 text-slate-400">
+            <ul className="list-disc pl-5 space-y-1 text-sm md:text-base text-slate-400">
               {project.description.map((point, pointIndex) => (
                 <li key={pointIndex}>{point}</li>
               ))}

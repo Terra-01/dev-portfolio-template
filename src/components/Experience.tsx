@@ -21,7 +21,7 @@ export default function Experience({ jobs }: ExperienceProps) {
             <p className="text-md text-slate-400 mt-1">
               {job.company} | {job.period}
             </p>
-            <ul className="mt-3 list-disc pl-5 space-y-1 text-slate-400">
+            <ul className="mt-3 list-disc pl-5 space-y-1 text-sm md:text-base text-slate-400">
               {job.description.map((point, pointIndex) => (
                 <li key={pointIndex}>{point}</li>
               ))}

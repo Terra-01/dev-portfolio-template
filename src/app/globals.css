@@ -1,3 +1,10 @@
+/* src/app/globals.css */
+/* SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
+/* TAILWIND */
 @import "tailwindcss";
 
 :root {
