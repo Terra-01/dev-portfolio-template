@@ -1,4 +1,4 @@
-# Minimalist Developer Portfolio Template
+# Terra's Developer Portfolio Template
 
 A clean, modern, and easily customizable developer portfolio built with Next.js and Tailwind CSS. This template is designed to be a "digital garden" where you can showcase your work, skills, and experience in a beautifully organized, single-page layout. The content is managed through simple markdown files, making updates and version control a breeze.
 
