@@ -27,7 +27,7 @@ export default function About({ contentHtml, keywords = [], learning = [] }: Abo
         />
 
         {/* 
-          NEW: Conditionally render the "Currently Learning" section.
+          Conditionally render the "Currently Learning" section.
           This block will only appear if the 'learning' array has items.
         */}
         {learning.length > 0 && (
