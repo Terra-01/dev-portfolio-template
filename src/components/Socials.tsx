@@ -9,7 +9,7 @@ export default function Socials() {
     <div className="flex w-full items-center justify-between">
       {/* GitHub */}
       {/* Replace "yourusername" with your actual GitHub username */}
-      <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] transition-colors">
+      <a href="https://github.com/Terra-01/dev-portfolio-template" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="text-[var(--color-text-secondary)] hover:text-[var(--color-accent-primary)] transition-colors">
         <IconGithub size={22} />
       </a>
       {/* LinkedIn */}

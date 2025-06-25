@@ -6,16 +6,25 @@ import IconPalette from './icons/IconPalette';
 
 const themes = [
   { value: 'dark-slate', label: 'Dark Slate' },
-  { value: 'pastel-lavender', label: 'Pastel Lavender' },
-  { value: 'midnight-blue', label: 'Midnight Blue' },
-  { value: 'forest-green', label: 'Forest Green' },
-  { value: 'solarized-dark', label: 'Solarized Dark' },
   { value: 'dracula', label: 'Dracula' },
-  { value: 'miami-nights', label: 'Miami Nights' },
-  { value: 'perestroika', label: 'Perestroika' },
-  { value: 'dandy', label: 'Dandy (Light)' },
+  { value: 'cinder', label: 'Cinder' },
+  { value: 'cocogoat', label: 'Cocogoat (Light)' },
+  { value: 'dandy-r1', label: 'Dandy R1 (Light)' },
+  { value: 'dolch', label: 'Dolch' },
+  { value: 'evil-dolch', label: 'Evil Dolch' },
+  { value: 'kaiju', label: 'Kaiju' },
+  { value: 'lavender', label: 'Lavender' },
   { value: 'metropolis', label: 'Metropolis' },
+  { value: 'miami-dusk', label: 'Miami Dusk' },
+  { value: 'miami-nights', label: 'Miami Nights' },
+  { value: 'mictlan', label: 'Mictlán' },
+  { value: 'olive', label: 'Olive' },
+  { value: 'perestroika', label: 'Perestroika' },
   { value: 'phantom', label: 'Phantom' },
+  { value: 'prussian-blue', label: 'Prussian Blue' },
+  { value: 'slasher', label: 'Slasher' },
+  { value: 'solarized-dark', label: 'Solarized Dark' },
+  { value: 'tiramisu', label: 'Tiramisu (Light)' },
 ];
 
 export default function ThemeSwitcher() {

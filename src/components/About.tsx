@@ -26,7 +26,7 @@ export default function About({ contentHtml, keywords = [], learning = [] }: Abo
         {learning && learning.length > 0 && (
           <>
             <div className="border-t border-[var(--color-border-primary)] my-6"></div>
-            <h3 className="text-md font-semibold text-[var(--color-text-secondary)] mb-3">Currently Exploring</h3>
+            <h3 className="text-md font-semibold text-[var(--color-text-primary)] mb-3">Currently Exploring</h3>
             <div className="flex flex-wrap gap-2">
               {learning.map((item, index) => (
                 <div key={index} className="bg-[var(--color-bg-tertiary)] text-[var(--color-accent-primary)] font-medium py-1 px-3 rounded-full text-sm">

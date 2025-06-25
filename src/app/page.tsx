@@ -79,8 +79,8 @@ export default function Home() {
                 <Image src="/profile.jpg" alt="Profile Picture" width={80} height={80} className="w-20 h-20 rounded-full object-cover" priority/>
                 <div>
                     <h1 className="text-3xl font-bold tracking-tight text-[var(--color-text-primary)]">Your Name</h1>
-                    <h2 className="mt-1 text-md font-medium tracking-tight text-[var(--color-text-secondary)]">Your Title</h2>
-                    <p className="mt-2 max-w-xs text-sm leading-normal text-[var(--color-text-muted)]">A brief, catchy tagline about your mission.</p>
+                    <h2 className="mt-1 text-md font-medium tracking-tight text-[var(--color-text-secondary)]">Click the github button to see the source code.</h2>
+                    <p className="mt-2 max-w-xs text-sm leading-normal text-[var(--color-text-muted)]">This is a template.</p>
                 </div>
             </div>
             <div className="flex flex-col items-center gap-4">
