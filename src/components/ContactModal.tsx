@@ -16,7 +16,7 @@ export default function ContactModal({ onClose }: ContactModalProps) {
       <div className="fixed inset-0 bg-[var(--color-bg-primary)]/80 backdrop-blur-sm flex items-center justify-center z-50">
         <div className="bg-[var(--color-bg-secondary)]/90 rounded-lg p-8 text-center w-full max-w-md">
           <h2 className="text-xl font-bold text-[var(--color-text-primary)] mb-4">Message Sent!</h2>
-          <p className="text-[var(--color-text-secondary)] mb-6">Thanks for reaching out. I'll get back to you soon.</p>
+          <p className="text-[var(--color-text-secondary)] mb-6">Thanks for reaching out. I will get back to you soon.</p>
           <button 
             onClick={onClose} 
             className="bg-[var(--color-accent-solid)] hover:bg-[var(--color-accent-solid-hover)] text-[var(--color-text-primary)] font-medium py-2 px-4 rounded-lg transition-colors"
