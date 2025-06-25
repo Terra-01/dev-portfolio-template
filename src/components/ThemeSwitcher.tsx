@@ -4,12 +4,18 @@
 import { useTheme } from './ThemeProvider';
 import IconPalette from './icons/IconPalette';
 
-// Define the available themes in an array for easy management.
 const themes = [
   { value: 'dark-slate', label: 'Dark Slate' },
   { value: 'pastel-lavender', label: 'Pastel Lavender' },
   { value: 'midnight-blue', label: 'Midnight Blue' },
   { value: 'forest-green', label: 'Forest Green' },
+  { value: 'solarized-dark', label: 'Solarized Dark' },
+  { value: 'dracula', label: 'Dracula' },
+  { value: 'miami-nights', label: 'Miami Nights' },
+  { value: 'perestroika', label: 'Perestroika' },
+  { value: 'dandy', label: 'Dandy (Light)' },
+  { value: 'metropolis', label: 'Metropolis' },
+  { value: 'phantom', label: 'Phantom' },
 ];
 
 export default function ThemeSwitcher() {
@@ -19,11 +25,15 @@ export default function ThemeSwitcher() {
     <div className="flex items-center gap-3">
       <IconPalette size={20} className="text-[var(--color-text-muted)]" />
       <div className="relative">
+        <label htmlFor="theme-switcher" className="sr-only">Select a theme</label>
+        
         <select
+          id="theme-switcher"
+          name="theme"
           value={theme}
           onChange={(e) => setTheme(e.target.value)}
           className="appearance-none w-full bg-[var(--color-bg-tertiary)] text-[var(--color-text-secondary)] border border-[var(--color-border-primary)] rounded-md py-2 pl-3 pr-8 text-sm focus:outline-none focus:ring-2 focus:ring-[var(--color-accent-primary)]"
-          aria-label="Select a theme"
+          autoComplete="off"
         >
           {themes.map(t => (
             <option key={t.value} value={t.value}>

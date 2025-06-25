@@ -22,7 +22,6 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState('dark-slate'); // Default theme
 
   useEffect(() => {
-    // On theme change, update the data-theme attribute on the html tag
     document.documentElement.setAttribute('data-theme', theme);
   }, [theme]);
 

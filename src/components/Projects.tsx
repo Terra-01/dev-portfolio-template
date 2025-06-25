@@ -18,7 +18,7 @@ export default function Projects({ projects }: ProjectsProps) {
   return (
     <section id="projects">
       <h2 className="text-base font-bold uppercase tracking-widest text-[var(--color-text-muted)] mb-6">Projects</h2>
-      <div className="bg-[var(--color-bg-secondary)] rounded-md p-6">
+      <div className="bg-[var(--color-bg-secondary)] rounded-md p-6 transition-shadow shadow-[0_4px_14px_0_var(--color-shadow)]/10 hover:shadow-[0_6px_20px_0_var(--color-shadow)]/20">
         {projects.map((project, index) => (
           <div key={index} className="[&:not(:last-child)]:mb-10">
             <div className="flex items-center justify-between mb-3">

@@ -14,7 +14,7 @@ export default function Experience({ jobs }: ExperienceProps) {
   return (
     <section id="experience">
       <h2 className="text-base font-bold uppercase tracking-widest text-[var(--color-text-muted)] mb-6">Experience</h2>
-      <div className="bg-[var(--color-bg-secondary)] rounded-md p-6">
+      <div className="bg-[var(--color-bg-secondary)] rounded-md p-6 transition-shadow shadow-[0_4px_14px_0_var(--color-shadow)]/10 hover:shadow-[0_6px_20px_0_var(--color-shadow)]/20">
         {jobs.map((job, index) => (
           <div key={index} className="[&:not(:last-child)]:mb-8">
             <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">{job.role}</h3>

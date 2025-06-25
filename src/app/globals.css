@@ -8,10 +8,11 @@ html {
 
 /* 
   =======================================
-  === MULTI-THEME DEFINITION LIBRARY  ===
+  === FINAL THEME SYSTEM (HEX-ONLY)   ===
   =======================================
-  The :root selector defines the default theme that loads first.
-  Each additional theme is defined inside a `[data-theme="..."]` selector.
+  The entire theme system is now defined using only standard hex codes.
+  Opacity for effects like backdrops and shadows is applied on-demand
+  in the components using Tailwind's alpha modifier (e.g., /80).
 */
 
 /* -- DEFAULT THEME: "Dark Slate" -- */
@@ -28,7 +29,7 @@ html {
   --color-border-primary: #334155;
   --color-error: #f87171;
   --color-disabled-bg: #475569;
-  --color-backdrop: rgba(10, 10, 10, 0.8);
+  --color-shadow: var(--color-accent-primary);
 }
 
 /* -- THEME 2: "Pastel Lavender" -- */
@@ -45,7 +46,7 @@ html {
   --color-border-primary: #d4d4d8;
   --color-error: #ef4444;
   --color-disabled-bg: #e4e4e7;
-  --color-backdrop: rgba(255, 255, 255, 0.8);
+  --color-shadow: var(--color-accent-primary);
 }
 
 /* -- THEME 3: "Midnight Blue" -- */
@@ -62,7 +63,7 @@ html {
   --color-border-primary: #2a364e;
   --color-error: #f43f5e;
   --color-disabled-bg: #4a5a7d;
-  --color-backdrop: rgba(11, 17, 32, 0.8);
+  --color-shadow: var(--color-accent-primary);
 }
 
 /* -- THEME 4: "Forest Green" -- */
@@ -79,9 +80,127 @@ html {
   --color-border-primary: #2f3e36;
   --color-error: #e57373;
   --color-disabled-bg: #4e6054;
-  --color-backdrop: rgba(26, 32, 28, 0.8);
+  --color-shadow: var(--color-accent-primary);
 }
 
+/* -- NEW THEME 5: "GMK Solarized Dark" -- */
+[data-theme="solarized-dark"] {
+  --color-bg-primary: #002b36;
+  --color-bg-secondary: #073642;
+  --color-bg-tertiary: #586e75;
+  --color-text-primary: #fdf6e3;
+  --color-text-secondary: #839496;
+  --color-text-muted: #657b83;
+  --color-accent-primary: #b58900;
+  --color-accent-solid: #cb4b16;
+  --color-accent-solid-hover: #dc322f;
+  --color-border-primary: #073642;
+  --color-error: #dc322f;
+  --color-disabled-bg: #586e75;
+  --color-shadow: var(--color-accent-primary);
+}
+
+/* -- NEW THEME 6: "GMK Dracula" -- */
+[data-theme="dracula"] {
+  --color-bg-primary: #282a36;
+  --color-bg-secondary: #383a59;
+  --color-bg-tertiary: #44475a;
+  --color-text-primary: #f8f8f2;
+  --color-text-secondary: #bd93f9;
+  --color-text-muted: #6272a4;
+  --color-accent-primary: #ff79c6;
+  --color-accent-solid: #50fa7b;
+  --color-accent-solid-hover: #8be9fd;
+  --color-border-primary: #44475a;
+  --color-error: #ff5555;
+  --color-disabled-bg: #44475a;
+  --color-shadow: var(--color-accent-primary);
+}
+
+/* -- NEW THEME 7: "GMK Miami Nights" -- */
+[data-theme="miami-nights"] {
+  --color-bg-primary: #1a1b26;
+  --color-bg-secondary: #2d2e37;
+  --color-bg-tertiary: #414868;
+  --color-text-primary: #c0caf5;
+  --color-text-secondary: #a9b1d6;
+  --color-text-muted: #565f89;
+  --color-accent-primary: #00f5d4;
+  --color-accent-solid: #ff00a0;
+  --color-accent-solid-hover: #ff40b7;
+  --color-border-primary: #414868;
+  --color-error: #f7768e;
+  --color-disabled-bg: #414868;
+  --color-shadow: #ff00a0;
+}
+
+/* -- NEW THEME 8: "GMK Perestroika" -- */
+[data-theme="perestroika"] {
+  --color-bg-primary: #1c1c1c;
+  --color-bg-secondary: #2a2a2a;
+  --color-bg-tertiary: #3c3c3c;
+  --color-text-primary: #e0d9c9;
+  --color-text-secondary: #c9c1b1;
+  --color-text-muted: #a8a091;
+  --color-accent-primary: #d72a2a;
+  --color-accent-solid: #c22525;
+  --color-accent-solid-hover: #b02121;
+  --color-border-primary: #3c3c3c;
+  --color-error: #d72a2a;
+  --color-disabled-bg: #3c3c3c;
+  --color-shadow: var(--color-accent-primary);
+}
+
+/* -- NEW THEME 9: "GMK Dandy" (Light Theme) -- */
+[data-theme="dandy"] {
+  --color-bg-primary: #f3e9d2;
+  --color-bg-secondary: #ffffff;
+  --color-bg-tertiary: #c8d5b9;
+  --color-text-primary: #4a5759;
+  --color-text-secondary: #6d7a7c;
+  --color-text-muted: #a4b494;
+  --color-accent-primary: #81a684;
+  --color-accent-solid: #6a994e;
+  --color-accent-solid-hover: #588140;
+  --color-border-primary: #e6e6e6;
+  --color-error: #d72a2a;
+  --color-disabled-bg: #e6e6e6;
+  --color-shadow: var(--color-accent-primary);
+}
+
+/* -- NEW THEME 10: "GMK Metropolis" -- */
+[data-theme="metropolis"] {
+  --color-bg-primary: #2d3748;
+  --color-bg-secondary: #4a5568;
+  --color-bg-tertiary: #718096;
+  --color-text-primary: #f7fafc;
+  --color-text-secondary: #e2e8f0;
+  --color-text-muted: #a0aec0;
+  --color-accent-primary: #4fd1c5;
+  --color-accent-solid: #38b2ac;
+  --color-accent-solid-hover: #319795;
+  --color-border-primary: #718096;
+  --color-error: #e53e3e;
+  --color-disabled-bg: #718096;
+  --color-shadow: var(--color-accent-primary);
+}
+
+/* -- NEW THEME 11: "GMK Phantom" -- */
+[data-theme="phantom"] {
+  --color-bg-primary: #1a1b26;
+  --color-bg-secondary: #2a2c41;
+  --color-bg-tertiary: #414868;
+  --color-text-primary: #c0caf5;
+  --color-text-secondary: #a9b1d6;
+  --color-text-muted: #7e829e;
+  --color-accent-primary: #bb9af7;
+  --color-accent-solid: #7aa2f7;
+  --color-accent-solid-hover: #5a87e0;
+  --color-border-primary: #414868;
+  --color-error: #f7768e;
+  --color-disabled-bg: #414868;
+  --color-shadow: var(--color-accent-primary);
+}
 
 /* --- You can add more themes here! Just copy the block above and change the selector. --- */
 
