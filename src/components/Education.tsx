@@ -2,35 +2,34 @@
 import IconSchool from './icons/IconSchool';
 
 type Degree = {
-    degree: string;
-    institution: string;
-    location: string;
-    period: string;
-  };
-  
-  type EducationProps = {
-    degrees: Degree[];
-  };
-  
-  export default function Education({ degrees }: EducationProps) {
-    return (
-      <section id="education">
-        <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6">Education</h2>
-        <div className="bg-slate-800/50 rounded-md p-6">
-          {degrees.map((degree, index) => (
-            <div key={index} className="[&:not(:last-child)]:mb-6">
-              <h3 className="text-lg font-semibold text-slate-100">{degree.degree}</h3>
-              <div className="flex items-center gap-2 mt-1">
-                <IconSchool size={16} className="text-slate-500" />
-                <p className="text-md text-slate-400">{degree.institution}</p>
-              </div>
-              <p className="text-sm text-slate-500 mt-1">
-                {degree.location} | {degree.period}
-              </p>
-  
+  degree: string;
+  institution: string;
+  location: string;
+  period: string;
+};
+
+type EducationProps = {
+  degrees: Degree[];
+};
+
+export default function Education({ degrees }: EducationProps) {
+  return (
+    <section id="education">
+      <h2 className="text-base font-bold uppercase tracking-widest text-[var(--color-text-muted)] mb-6">Education</h2>
+      <div className="bg-[var(--color-bg-secondary)] rounded-md p-6">
+        {degrees.map((degree, index) => (
+          <div key={index} className="[&:not(:last-child)]:mb-6">
+            <h3 className="text-lg font-semibold text-[var(--color-text-primary)]">{degree.degree}</h3>
+            <div className="flex items-center gap-2 mt-1">
+              <IconSchool size={16} className="text-[var(--color-text-muted)]" />
+              <p className="text-md text-[var(--color-text-secondary)]">{degree.institution}</p>
             </div>
-          ))}
-        </div>
-      </section>
-    );
-  }
+            <p className="text-sm text-[var(--color-text-muted)] mt-1">
+              {degree.location} | {degree.period}
+            </p>
+          </div>
+        ))}
+      </div>
+    </section>
+  );
+}

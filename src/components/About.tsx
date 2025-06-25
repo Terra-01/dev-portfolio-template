@@ -1,6 +1,5 @@
 // src/components/About.tsx
 "use client";
-
 import { useMemo } from 'react';
 
 type AboutProps = {
@@ -10,35 +9,27 @@ type AboutProps = {
 };
 
 export default function About({ contentHtml, keywords = [], learning = [] }: AboutProps) {
-  
   const highlightedHtml = useMemo(() => {
-    if (!keywords.length) return contentHtml;
+    if (!keywords || keywords.length === 0) return contentHtml;
     const regex = new RegExp(`(${keywords.join('|')})`, 'gi');
-    return contentHtml.replace(regex, (match) => `<span class="font-bold text-teal-300">${match}</span>`);
+    return contentHtml.replace(regex, (match) => `<span class="font-bold text-[var(--color-accent-primary)]">${match}</span>`);
   }, [contentHtml, keywords]);
 
   return (
     <section id="about">
-      <h2 className="text-sm font-bold uppercase tracking-widest text-slate-500 mb-6">About</h2>
-      <div className="bg-slate-800/50 rounded-md p-6">
+      <h2 className="text-base font-bold uppercase tracking-widest text-[var(--color-text-muted)] mb-6">About</h2>
+      <div className="bg-[var(--color-bg-secondary)] rounded-md p-6">
         <div
-          className="prose prose-slate max-w-none prose-p:text-slate-400"
+          className="prose max-w-none"
           dangerouslySetInnerHTML={{ __html: highlightedHtml }}
         />
-
-        {/* 
-          Conditionally render the "Currently Learning" section.
-          This block will only appear if the 'learning' array has items.
-        */}
-        {learning.length > 0 && (
+        {learning && learning.length > 0 && (
           <>
-            <div className="border-t border-slate-700 my-6"></div>
-
-            <h3 className="text-md font-semibold text-slate-300 mb-3">Currently Exploring</h3>
-            
+            <div className="border-t border-[var(--color-border-primary)] my-6"></div>
+            <h3 className="text-md font-semibold text-[var(--color-text-secondary)] mb-3">Currently Exploring</h3>
             <div className="flex flex-wrap gap-2">
               {learning.map((item, index) => (
-                <div key={index} className="bg-teal-900/50 text-teal-300 font-medium py-1 px-3 rounded-full text-sm">
+                <div key={index} className="bg-[var(--color-bg-tertiary)] text-[var(--color-accent-primary)] font-medium py-1 px-3 rounded-full text-sm">
                   {item}
                 </div>
               ))}

@@ -2,6 +2,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import ThemeSwitcher from '@/components/ThemeSwitcher';
 import Image from 'next/image';
 import About from '@/components/About';
 import Experience from '@/components/Experience';
@@ -55,7 +56,7 @@ export default function Home() {
   }, []);
 
   if (isLoading) {
-    return <div className="min-h-screen bg-slate-900 flex items-center justify-center text-white">Loading...</div>;
+    return <div className="min-h-screen bg-[var(--color-bg-primary)] flex items-center justify-center text-[var(--color-text-primary)]">Loading...</div>;
   }
 
   return (
@@ -63,11 +64,11 @@ export default function Home() {
       <main className="mx-auto max-w-screen-xl px-6 pt-8 pb-12 md:px-12 md:pt-16 md:pb-20">
         <header className="flex flex-col items-center gap-8 lg:flex-row lg:justify-between lg:items-start mb-8">
             <div className="flex items-center gap-4">
-                <Image src="/profile.jpg" alt="Profile Picture" width={80} height={80} className="w-20 h-20 rounded-full object-cover"/>
+                <Image src="/profile.jpg" alt="Profile Picture" width={80} height={80} className="w-20 h-20 rounded-full object-cover" priority/>
                 <div>
-                    <h1 className="text-3xl font-bold tracking-tight text-slate-200">Your Name</h1>
-                    <h2 className="mt-1 text-md font-medium tracking-tight text-slate-400">Your Title</h2>
-                    <p className="mt-2 max-w-xs text-sm leading-normal text-slate-500">A brief, catchy tagline about your mission.</p>
+                    <h1 className="text-3xl font-bold tracking-tight text-[var(--color-text-primary)]">Your Name</h1>
+                    <h2 className="mt-1 text-md font-medium tracking-tight text-[var(--color-text-secondary)]">Your Title</h2>
+                    <p className="mt-2 max-w-xs text-sm leading-normal text-[var(--color-text-muted)]">A brief, catchy tagline about your mission.</p>
                 </div>
             </div>
             <div className="flex flex-col items-center gap-4">
@@ -81,6 +82,7 @@ export default function Home() {
             <About contentHtml={data.aboutData.contentHtml} learning={data.aboutData.currentlyLearning} keywords={data.aboutData.highlightKeywords} />
             <Education degrees={data.educationData.degrees} />
             <Skills categories={data.skillsData.skillCategories} />
+            <ThemeSwitcher />
           </aside>
           
           <section className="lg:w-2/3 flex flex-col gap-8 order-1 lg:order-2">
