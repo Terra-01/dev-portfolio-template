@@ -14,7 +14,20 @@ import DownloadCV from '@/components/DownloadCV';
 import ContactFAB from '@/components/ContactFAB';
 import ContactModal from '@/components/ContactModal';
 
-const initialDataState = {
+type Project = { name: string; link?: string; github?: string; tech: string[]; description: string[]; };
+type Job = { role: string; company: string; period: string; description: string[]; };
+type Degree = { degree: string; institution: string; location: string; period: string; };
+type SkillCategory = { name: string; skills: string[]; };
+
+type PageData = {
+  aboutData: { contentHtml: string; highlightKeywords: string[]; currentlyLearning: string[]; };
+  experienceData: { jobs: Job[] };
+  educationData: { degrees: Degree[] };
+  skillsData: { skillCategories: SkillCategory[] };
+  projectsData: { projects: Project[] };
+};
+
+const initialDataState: PageData = {
   aboutData: { contentHtml: "", highlightKeywords: [], currentlyLearning: [] },
   experienceData: { jobs: [] },
   educationData: { degrees: [] },
@@ -25,7 +38,7 @@ const initialDataState = {
 export default function Home() {
   const [isContactOpen, setContactOpen] = useState(false);
 
-  const [data, setData] = useState<any>(initialDataState);
+  const [data, setData] = useState<PageData>(initialDataState);
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -51,7 +64,6 @@ export default function Home() {
         setIsLoading(false);
       }
     };
-
     fetchAllData();
   }, []);
 
