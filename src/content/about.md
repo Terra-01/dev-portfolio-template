@@ -22,3 +22,4 @@ Write a brief introduction about yourself, your background, and what you do
 You can include your passion, experience, and what drives you as a developer -->
 Hello! Terra here. This is a dev portfolio template, to view the source code click on the top right GitHub button.
 Feel free to add more themes and send me a message using the bottom right Contact button.
+<!-- Due to the YAML format, please use two apostrophes '' instead of one, it breaks the component -->

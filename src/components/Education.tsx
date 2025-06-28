@@ -12,7 +12,7 @@ type EducationProps = {
   degrees: Degree[];
 };
 
-export default function Education({ degrees }: EducationProps) {
+export default function Education({ degrees = [] }: EducationProps) {
   return (
     <section id="education">
       <h2 className="text-base font-bold uppercase tracking-widest text-[var(--color-text-muted)] mb-6">Education</h2>

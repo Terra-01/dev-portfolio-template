@@ -12,3 +12,4 @@ degrees:
     # You can add more degrees by copying the structure above
     # Each degree should have: degree, institution, location, and period fields
 ---
+<!-- Due to the YAML format, please use two apostrophes '' instead of one, it breaks the component -->

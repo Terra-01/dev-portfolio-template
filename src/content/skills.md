@@ -27,3 +27,4 @@ skillCategories:
   # The skills field should be a list of your actual skills in that category
   # Feel free to reorganize categories based on your preferences
 ---
+<!-- Due to the YAML format, please use two apostrophes '' instead of one, it breaks the component -->

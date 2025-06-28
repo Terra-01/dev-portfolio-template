@@ -8,7 +8,7 @@ type SkillsProps = {
   categories: SkillCategory[];
 };
 
-export default function Skills({ categories }: SkillsProps) {
+export default function Skills({ categories = [] }: SkillsProps) {
   return (
     <section id="skills">
       <h2 className="text-base font-bold uppercase tracking-widest text-[var(--color-text-muted)] mb-6">Skills</h2>

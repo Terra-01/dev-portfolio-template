@@ -19,3 +19,4 @@ jobs:
       # Each job should have: role, company, period, and description fields
       # The description should be a list of your key responsibilities and achievements
 ---
+<!-- Due to the YAML format, please use two apostrophes '' instead of one, it breaks the component -->

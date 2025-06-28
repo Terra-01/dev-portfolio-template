@@ -10,7 +10,7 @@ type ExperienceProps = {
   jobs: Job[];
 };
 
-export default function Experience({ jobs }: ExperienceProps) {
+export default function Experience({ jobs = [] }: ExperienceProps) {
   return (
     <section id="experience">
       <h2 className="text-base font-bold uppercase tracking-widest text-[var(--color-text-muted)] mb-6">Experience</h2>

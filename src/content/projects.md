@@ -29,3 +29,4 @@ projects:
       # The description should highlight your role, key features, and technical achievements
       # Include both personal projects and work projects that you can showcase
 ---
+<!-- Due to the YAML format, please use two apostrophes '' instead of one, it breaks the component -->

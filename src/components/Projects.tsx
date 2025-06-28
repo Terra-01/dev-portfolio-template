@@ -14,7 +14,7 @@ type ProjectsProps = {
   projects: Project[];
 };
 
-export default function Projects({ projects }: ProjectsProps) {
+export default function Projects({ projects = [] }: ProjectsProps) {
   return (
     <section id="projects">
       <h2 className="text-base font-bold uppercase tracking-widest text-[var(--color-text-muted)] mb-6">Projects</h2>
