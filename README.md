@@ -4,7 +4,7 @@ A clean, modern, and easily customizable developer portfolio built with Next.js 
 
 **[Live Demo](https://terra-temp.vercel.app/)**
 
-<!-- TODO: Add a screenshot or a GIF of this portfolio -->
+![Example Image](public/screenshot.png)
 
 ## Core Features
 
@@ -41,17 +41,19 @@ To personalize this template, you only need to edit a few key files.
 -   **Global Identity:**
     -   `src/app/page.tsx`: Edit your **Name, Title, and Tagline** in the `<header>`.
     -   `public/`: Replace `profile.jpg` with your image and `cv.pdf` with your resume.
+    -   `src/components/DownloadCV.tsx` : Replace `YourName_CV.pdf` with your preferred pdf name.
 
 -   **Theming:**
     -   `src/app/globals.css`: **Add or edit theme color palettes** here. Each theme is a block of CSS variables under a `[data-theme="..."]` selector.
     -   `src/components/ThemeSwitcher.tsx`: **Update the `themes` array** to add your new theme to the dropdown menu.
 
 -   **Content (Markdown):**
-    -   `src/content/`: **Edit the `.md` files** (`about.md`, `experience.md`, `projects.md`, etc.) to fill in your personal information.
+    -   `src/content/`: **Edit the `.md` files** (`about.md`, `experience.md`, `education.md`, `projects.md`, `skills.md`, etc.) to fill in your personal information.
 
 -   **Links & Services:**
     -   `src/components/Socials.tsx`: Update the `href` values with your profile URLs.
     -   `src/components/ContactModal.tsx`: Paste your unique Formspree ID into the `useForm` hook.
+    -   `src/components/ThemeProvider.tsx`: Change the default theme (preference).
 
 ## Deployment
 
